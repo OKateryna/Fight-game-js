@@ -6,7 +6,9 @@ export class ImprovedFighter extends Fighter {
     }
 
     doubleHit(enemy, point){
+        if (this.health > 0){
         point *= 2;
         super.hit(enemy, point);
+        }
     }
 }

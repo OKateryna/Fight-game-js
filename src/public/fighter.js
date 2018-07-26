@@ -1,6 +1,3 @@
-import { resolve } from "url";
-import { rejects } from "assert";
-
 export class Fighter {
     constructor(name, power, health = 100){
         this.name = name;
@@ -14,10 +11,11 @@ export class Fighter {
     }
 
     hit(enemy, point){
-        let damage = point*this.power;
-        let leftHealth = enemy.setDamage(damage);
-        console.log(`Enemy ${enemy.name} got hit by ${damage}. ${leftHealth}`)
-
+        if (this.health > 0){
+            let damage = point*this.power;
+            let leftHealth = enemy.setDamage(damage);
+            console.log(`Enemy ${enemy.name} got hit by ${damage}. ${leftHealth}`)
+        }
     }
 
     knockout(){

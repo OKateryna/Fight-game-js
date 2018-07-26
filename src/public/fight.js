@@ -1,7 +1,4 @@
 // create async function fight\
-import {Fighter} from "./fighter";
-import {ImprovedFighter} from "./improvedFighter";
-
 export async function fight(fighter, improvedFighter, ...points){
    try {
        while(true){
